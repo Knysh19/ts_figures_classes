@@ -4,7 +4,7 @@ interface Figure {
   getArea(): number;
 }
 
-class Triangle implements Figure {
+export class Triangle implements Figure {
   shape: 'triangle' = 'triangle';
 
   color: 'red' | 'green' | 'blue';
@@ -44,7 +44,7 @@ class Triangle implements Figure {
   }
 }
 
-class Circle implements Figure {
+export class Circle implements Figure {
   shape: 'circle' = 'circle';
 
   color: 'red' | 'green' | 'blue';
@@ -66,7 +66,7 @@ class Circle implements Figure {
   }
 }
 
-class Rectangle implements Figure {
+export class Rectangle implements Figure {
   shape: 'rectangle' = 'rectangle';
 
   color: 'red' | 'green' | 'blue';
@@ -91,6 +91,6 @@ class Rectangle implements Figure {
   }
 }
 
-function getInfo(fig: Figure): string {
+export function getInfo(fig: Figure): string {
   return `A ${fig.color} ${fig.shape} - ${fig.getArea()}`;
 }
